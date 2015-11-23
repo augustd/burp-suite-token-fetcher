@@ -27,10 +27,10 @@ public class BurpExtender extends BaseExtender implements IHttpListener, IExtens
     protected BurpSuiteTab mTab;
 
     // pattern used to replace the form token with a fresh value on scanner requests
-    private Pattern tokenInsertionPattern  = Pattern.compile(""); //name=\"FORM_TOKEN\"\\r\\n\\r\\n([A-Za-z0-9]*)
+    private Pattern tokenInsertionPattern  = Pattern.compile(""); 
     
     // pattern used to parse out the token from the form page
-    private Pattern tokenExtractionPattern = Pattern.compile(""); //<input type=\"hidden\" name=\"FORM_TOKEN\" value=\"([A-Za-z0-9]*)\"/>
+    private Pattern tokenExtractionPattern = Pattern.compile(""); 
     
     // the URL to the form page
     private URL formUrl = null;
@@ -184,7 +184,6 @@ public class BurpExtender extends BaseExtender implements IHttpListener, IExtens
 
     @Override
     public void extensionUnloaded() {
-        callbacks.printOutput("extensionUnloaded");
         guiPanel.saveSettings();
     }
 
