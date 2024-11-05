@@ -2,3 +2,6 @@
 /build/
 /nbproject/private/
 .idea/
+
+# Ignore built files
+target/
